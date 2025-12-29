@@ -1,163 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dental Digital CR | Dental Laboratory for Clinics & Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Dental Digital CR | Laboratorio Dental Digital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
 
-    header {
-      text-align: center;
-      padding: 50px 20px;
-    }
+/* Títulos centrados */
+h1, h2, h3 { text-align: center; color: #d4af37; }
 
-    header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-    header h1 {
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
+header img {
+  max-width: 200px;
+  margin-bottom: 15px;
+}
 
-    header p {
-      color: #ccc;
-      max-width: 900px;
-      margin: auto;
-      font-size: 17px;
-      line-height: 1.6;
-    }
+header p {
+  color: #ccc;
+  max-width: 900px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
-    .lang-switch {
-      margin-top: 18px;
-    }
+.lang-switch {
+  text-align: center;
+  margin-top: 18px;
+}
 
-    .lang-switch button {
-      background: #111;
-      color: #d4af37;
-      border: 1px solid #d4af37;
-      padding: 8px 18px;
-      margin: 5px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.lang-switch button {
+  background: #111;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+section { max-width: 1150px; margin: auto; padding: 60px 20px; }
 
-    h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.services, .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
+.card, .gallery-item {
+  background-color: #111;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 18px rgba(212,175,55,0.18);
+  text-align: center;
+}
 
-    .card {
-      background-color: #111;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 0 18px rgba(212,175,55,0.18);
-    }
+.card h3 { margin-bottom: 10px; }
+.card p, .gallery-item p { color: #ccc; font-size: 15px; line-height: 1.5; }
 
-    .card h3 {
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
+.gallery-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-    .card p {
-      color: #ccc;
-      font-size: 15px;
-      line-height: 1.5;
-    }
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-    }
+.btn-whatsapp {
+  background: #25D366;
+  color: #000;
+}
 
-    .gallery-item {
-      background: #111;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 0 16px rgba(212,175,55,0.15);
-      text-align: center;
-    }
+.btn-gold {
+  background: #d4af37;
+  color: #000;
+}
 
-    .gallery-item img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-    }
+.en { display: none; }
 
-    .gallery-item p {
-      color: #ccc;
-      padding: 14px;
-      font-size: 14px;
-    }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #000;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
 
-    .contact {
-      text-align: center;
-      color: #ccc;
-      font-size: 16px;
-    }
+.whatsapp-float:hover { transform: scale(1.1); }
 
-    footer {
-      text-align: center;
-      padding: 22px;
-      font-size: 14px;
-      color: #777;
-    }
+.whatsapp-float i { font-size: 22px; }
 
-    /* WhatsApp floating */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      background-color: #25D366;
-      color: #000;
-      padding: 14px 22px;
-      border-radius: 40px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.45);
-      z-index: 1000;
-    }
+footer { text-align: center; padding: 25px; color: #777; font-size: 14px; }
+</style>
 
-    .whatsapp-float svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .en { display: none; }
-  </style>
-
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
-      document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
-    }
-  </script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
+  document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+}
+</script>
 </head>
 
 <body onload="setLang('es')">
@@ -173,9 +145,9 @@
   </p>
 
   <p class="en">
-    Digital dental laboratory focused on supporting <strong>dental clinics and dental laboratories</strong>
+    Digital dental laboratory focused on supporting <strong>dental clinics and laboratories</strong>
     with high-precision digital solutions. We work as strategic partners to improve workflow,
-    accuracy and clinical outcomes.
+    costs, and clinical outcomes.
   </p>
 
   <div class="lang-switch">
@@ -185,118 +157,75 @@
 </header>
 
 <section>
-  <h2 class="es">Quiénes Somos</h2>
-  <h2 class="en">Who We Are</h2>
-
-  <p class="es" style="text-align:center;">
-    En Dental Digital CR somos un laboratorio especializado en flujos digitales CAD/CAM.
-    Brindamos soporte técnico y producción digital a clínicas y laboratorios que buscan
-    externalizar diseño, impresión y planificación de casos complejos con altos estándares
-    de calidad.
-  </p>
-
-  <p class="en" style="text-align:center;">
-    Dental Digital CR is a digital laboratory specialized in CAD/CAM workflows.
-    We provide digital design and production support to clinics and laboratories looking
-    to outsource advanced dental cases with consistent quality.
-  </p>
-</section>
-
-<section>
   <h2 class="es">Nuestros Servicios</h2>
   <h2 class="en">Our Services</h2>
 
   <div class="services">
-
     <div class="card">
       <h3>Diseño Digital CAD/CAM</h3>
-      <p class="es">
-        Diseño de coronas, puentes, carillas, coronas sobre implantes,
-        rehabilitaciones completas y casos All-on-X para clínicas y laboratorios.
-      </p>
-      <p class="en">
-        CAD/CAM design of crowns, bridges, veneers, implant restorations
-        and All-on-X cases for clinics and labs.
-      </p>
+      <p class="es">Coronas, puentes, carillas, coronas sobre implantes, All-on-X y rehabilitaciones completas.</p>
+      <p class="en">CAD/CAM design of crowns, bridges, veneers, implant restorations, All-on-X and full rehabilitations.</p>
     </div>
-
     <div class="card">
       <h3>Impresión 3D Profesional</h3>
-      <p class="es">
-        Impresión de coronas provisionales, férulas, splints, modelos 3D,
-        guías quirúrgicas y cargas inmediatas.
-      </p>
-      <p class="en">
-        Professional 3D printing of provisional crowns, splints,
-        3D models, surgical guides and immediate load cases.
-      </p>
+      <p class="es">Coronas provisionales, férulas, splints, modelos 3D, guías quirúrgicas y cargas inmediatas.</p>
+      <p class="en">Provisional crowns, splints, 3D models, surgical guides and immediate load cases.</p>
     </div>
-
     <div class="card">
       <h3>Prótesis Dentales</h3>
-      <p class="es">
-        Prótesis acrílicas y flexibles, desarrolladas como soporte productivo
-        para clínicas y laboratorios aliados.
-      </p>
-      <p class="en">
-        Acrylic and flexible prosthetics developed as production support
-        for partner clinics and laboratories.
-      </p>
+      <p class="es">Acrílicas y flexibles, como soporte productivo para clínicas y laboratorios aliados.</p>
+      <p class="en">Acrylic and flexible prosthetics developed as production support for partner clinics and labs.</p>
     </div>
-
     <div class="card">
       <h3>Ortodoncia Digital</h3>
-      <p class="es">
-        Planificación digital y soporte en aparatología y alineadores
-        para clínicas de ortodoncia.
-      </p>
-      <p class="en">
-        Digital planning and orthodontic appliance support for clinics.
-      </p>
+      <p class="es">Planificación digital y soporte en aparatología y alineadores para clínicas de ortodoncia.</p>
+      <p class="en">Digital planning and orthodontic appliance support for clinics.</p>
     </div>
-
   </div>
 </section>
 
 <section>
-  <h2 class="es">Casos y Producción</h2>
-  <h2 class="en">Cases & Production</h2>
+  <h2 class="es">Galería de Trabajos</h2>
+  <h2 class="en">Work Gallery</h2>
 
   <div class="gallery">
     <div class="gallery-item">
-      <img src="galeria/ferula.jpg" alt="Dental splint">
-      <p class="es">Férulas y Splints Digitales</p>
-      <p class="en">Digital Splints</p>
+      <img src="galeria/flexible.jpg" alt="Prótesis flexible">
+      <p class="es">Prótesis Flexibles</p>
+      <p class="en">Flexible Prosthetics</p>
     </div>
-
     <div class="gallery-item">
-      <img src="galeria/modelo3d.jpg" alt="3D dental model">
-      <p class="es">Modelos 3D para Clínicas y Laboratorios</p>
-      <p class="en">3D Models for Clinics and Labs</p>
+      <img src="galeria/coronas.jpg" alt="Coronas dentales">
+      <p class="es">Coronas Dentales</p>
+      <p class="en">Dental Crowns</p>
+    </div>
+    <div class="gallery-item">
+      <img src="galeria/ferula.jpg" alt="Férulas dentales">
+      <p class="es">Férulas y Splints</p>
+      <p class="en">Dental Splints</p>
+    </div>
+    <div class="gallery-item">
+      <img src="galeria/modelos3d.jpg" alt="Modelos 3D">
+      <p class="es">Modelos 3D</p>
+      <p class="en">3D Models</p>
     </div>
   </div>
 </section>
 
-<section class="contact">
-  <p><strong>Email:</strong> contacto@dentaldigitalcr.com</p>
-  <p class="es">Atendemos clínicas y laboratorios a nivel nacional e internacional.</p>
-  <p class="en">We work with clinics and laboratories worldwide.</p>
+<section style="text-align:center; padding:50px 20px;">
+  <a class="btn btn-gold" href="envio-casos.html">
+    <span class="es">Enviar Caso</span>
+    <span class="en">Send Case</span>
+  </a>
 </section>
 
 <footer>
-  © 2025 Dental Digital CR · Digital Dental Laboratory
+  © 2025 Dental Digital CR · Laboratorio Dental Digital
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/50672640280?text=Hello%2C%20I%20represent%20a%20dental%20clinic%20or%20laboratory%20and%20would%20like%20to%20request%20information."
-   class="whatsapp-float"
-   target="_blank">
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">
-    <path d="M12 0C5.371 0 0 5.373 0 12c0 2.123.553 4.201 1.602 6.035L0 24l6.164-1.586A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-  </svg>
-
-  WhatsApp
+<!-- WhatsApp flotante mejorado -->
+<a href="https://wa.me/50672640280" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i> WhatsApp
 </a>
 
 </body>
