@@ -2,252 +2,211 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dental Digital CR | Digital Dental Laboratory</title>
+  <title>Dental Digital CR | Laboratorio Dental Digital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- WhatsApp Icon -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
+      background: #000;
       color: #fff;
     }
 
     header {
+      background: #000;
       text-align: center;
-      padding: 50px 20px;
-    }
-
-    header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      color: #d4af37;
-    }
-
-    header p {
-      color: #ccc;
-      max-width: 900px;
-      margin: auto;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .lang-switch {
-      margin-top: 18px;
-    }
-
-    .lang-switch button {
-      background: #111;
-      color: #d4af37;
-      border: 1px solid #d4af37;
-      padding: 8px 18px;
-      margin: 5px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1150px;
-      margin: auto;
       padding: 60px 20px;
     }
 
-    h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 35px;
+    header img {
+      max-width: 200px;
+      margin-bottom: 20px;
     }
 
-    .services {
+    h1, h2 {
+      color: #d4af37;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services, .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
     .card {
-      background-color: #111;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 0 18px rgba(212,175,55,0.18);
-    }
-
-    .card h3 {
-      color: #d4af37;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 15px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-    }
-
-    .gallery-item {
       background: #111;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 0 16px rgba(212,175,55,0.15);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 15px rgba(212,175,55,0.15);
       text-align: center;
     }
 
-    .gallery-item img {
+    .card img {
       width: 100%;
-      height: 230px;
-      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
     }
 
-    .gallery-item p {
-      color: #ccc;
-      padding: 14px;
-      font-size: 14px;
+    .cta {
+      text-align: center;
+      padding: 70px 20px;
     }
 
-    /* FORMULARIO */
-    form {
-      max-width: 700px;
-      margin: auto;
-      background: #111;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 0 18px rgba(212,175,55,0.18);
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    form label {
-      display: block;
-      margin-top: 15px;
-      color: #d4af37;
-      font-size: 14px;
+    .btn-whatsapp {
+      background: #25D366;
+      color: #000;
     }
 
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      background: #000;
-      border: 1px solid #333;
-      border-radius: 8px;
-      color: #fff;
-    }
-
-    form button {
-      margin-top: 25px;
-      width: 100%;
+    .btn-gold {
       background: #d4af37;
       color: #000;
-      padding: 14px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
     }
 
     footer {
       text-align: center;
-      padding: 22px;
-      font-size: 14px;
+      padding: 30px;
+      background: #000;
       color: #777;
+      font-size: 14px;
     }
 
+    /* WhatsApp Floating Button */
     .whatsapp-float {
       position: fixed;
-      bottom: 22px;
-      right: 22px;
-      background-color: #25D366;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
       color: #000;
-      padding: 14px 22px;
-      border-radius: 40px;
-      font-weight: bold;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      font-size: 28px;
       text-decoration: none;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
       z-index: 1000;
     }
-
-    .en { display: none; }
   </style>
-
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
-      document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
-    }
-  </script>
 </head>
 
-<body onload="setLang('es')">
+<body>
 
 <header>
   <img src="logo.png" alt="Dental Digital CR">
   <h1>Dental Digital CR</h1>
-
-  <p class="es">
-    Laboratorio dental digital especializado en soporte productivo para clínicas
-    y laboratorios dentales.
-  </p>
-
-  <p class="en">
-    Digital dental laboratory specialized in production support for clinics and laboratories.
-  </p>
-
-  <div class="lang-switch">
-    <button onclick="setLang('es')">Español</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
+  <p class="es">Laboratorio Dental Digital</p>
+  <p class="en">Digital Dental Laboratory</p>
 </header>
 
 <section>
-  <h2 class="es">Envío de Casos</h2>
-  <h2 class="en">Case Submission</h2>
+  <h2 class="es">Sobre Nosotros</h2>
+  <h2 class="en">About Us</h2>
 
-  <form action="mailto:contacto@dentaldigitalcr.com" method="post" enctype="text/plain">
+  <p class="es">
+    Somos un laboratorio dental digital especializado en el diseño y fabricación
+    de soluciones protésicas de alta precisión para clínicas y laboratorios dentales,
+    a nivel nacional e internacional.
+  </p>
 
-    <label class="es">Nombre de la Clínica o Laboratorio</label>
-    <label class="en">Clinic or Laboratory Name</label>
-    <input type="text" name="Clinica" required>
+  <p class="en">
+    We are a digital dental laboratory specialized in the design and manufacturing
+    of high-precision prosthetic solutions for clinics and dental laboratories,
+    nationally and internationally.
+  </p>
+</section>
 
-    <label class="es">Nombre del Profesional</label>
-    <label class="en">Doctor / Technician Name</label>
-    <input type="text" name="Profesional" required>
+<section>
+  <h2 class="es">Servicios</h2>
+  <h2 class="en">Services</h2>
 
-    <label>Email</label>
-    <input type="email" name="Email" required>
+  <div class="services">
+    <div class="card">
+      <p class="es">Diseño digital de coronas, puentes y carillas</p>
+      <p class="en">Digital design of crowns, bridges and veneers</p>
+    </div>
 
-    <label class="es">Tipo de Caso</label>
-    <label class="en">Case Type</label>
-    <select name="Caso">
-      <option>Coronas</option>
-      <option>Puentes</option>
-      <option>Implantes</option>
-      <option>All-on-X</option>
-      <option>Férulas</option>
-      <option>Otro</option>
-    </select>
+    <div class="card">
+      <p class="es">Coronas sobre implantes y All-on-X</p>
+      <p class="en">Implant crowns and All-on-X solutions</p>
+    </div>
 
-    <label class="es">Detalles del Caso</label>
-    <label class="en">Case Details</label>
-    <textarea name="Detalles" rows="5"></textarea>
+    <div class="card">
+      <p class="es">Férulas, splints y aparatología de ortodoncia</p>
+      <p class="en">Splints and orthodontic appliances</p>
+    </div>
 
-    <button type="submit">Enviar Caso</button>
-  </form>
+    <div class="card">
+      <p class="es">Modelos 3D, impresiones y cargas inmediatas</p>
+      <p class="en">3D models, prints and immediate load cases</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="es">Galería de Trabajos</h2>
+  <h2 class="en">Work Gallery</h2>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="galeria/coronas.jpg" alt="Coronas Dentales">
+      <p class="es">Coronas Dentales Digitales</p>
+      <p class="en">Digital Dental Crowns</p>
+    </div>
+
+    <div class="card">
+      <img src="galeria/ferula.jpg" alt="Férulas Dentales">
+      <p class="es">Férulas y Splints</p>
+      <p class="en">Dental Splints</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2 class="es">Trabajemos Juntos</h2>
+  <h2 class="en">Let’s Work Together</h2>
+
+  <a class="btn btn-whatsapp"
+     href="https://wa.me/50672640280"
+     target="_blank">
+     <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+
+  <a class="btn btn-gold" href="envio-casos.html">
+     Enviar Caso
+  </a>
 </section>
 
 <footer>
-  © 2025 Dental Digital CR · Digital Dental Laboratory
+  © 2025 Dental Digital CR · Laboratorio Dental Digital
 </footer>
 
-<a href="https://wa.me/50672640280" class="whatsapp-float" target="_blank">
-  WhatsApp
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp-float"
+   href="https://wa.me/50672640280"
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
