@@ -71,32 +71,32 @@
       font-size: 15px;
     }
 
+    /* GALERÍA */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
 
-    .gallery div {
-      background-color: #1a1a1a;
-      height: 180px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 14px;
-    }
-
-    .cta {
-      background-color: #111;
+    .gallery-item {
+      background: #111;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(212,175,55,0.12);
       text-align: center;
-      padding: 60px 20px;
     }
 
-    .cta p {
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item p {
+      margin: 14px 0;
       color: #ccc;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     footer {
@@ -151,7 +151,7 @@
   <h1>Dental Digital CR</h1>
   <p>
     Laboratorio dental digital especializado en apoyar a odontólogos con soluciones
-    de alta precisión, estética y confiabilidad, a nivel nacional e internacional.
+    de alta precisión, estética y confiabilidad a nivel nacional e internacional.
   </p>
 </header>
 
@@ -206,21 +206,20 @@
 </section>
 
 <section>
-  <h2>Galería</h2>
+  <h2>Galería de Trabajos</h2>
   <div class="gallery">
-    <div>Próximamente</div>
-    <div>Fotos reales</div>
-    <div>De nuestros</div>
-    <div>Trabajos</div>
-  </div>
-</section>
 
-<section class="cta">
-  <h2>Contáctanos</h2>
-  <p>
-    ¿Eres odontólogo y deseas cotizar un caso?
-    Contáctanos directamente por WhatsApp.
-  </p>
+    <div class="gallery-item">
+      <img src="galeria/ferula.jpg" alt="Férula dental">
+      <p>Férulas y Splints</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="galeria/modelo3d.jpg" alt="Modelo 3D dental">
+      <p>Modelos 3D</p>
+    </div>
+
+  </div>
 </section>
 
 <footer>
