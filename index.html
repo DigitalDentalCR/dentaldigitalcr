@@ -2,47 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dental Digital CR | Laboratorio Dental Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dental Digital CR | Laboratorio Dental</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
       color: #fff;
     }
 
     header {
-      padding: 50px 20px;
       text-align: center;
-      background: #000;
+      padding: 40px 20px;
+      background-color: #000;
     }
 
     header img {
-      max-width: 160px;
+      max-width: 200px;
+      margin-bottom: 20px;
     }
 
-    header h1 {
+    h1 {
       color: #d4af37;
-      margin: 20px 0 10px;
-    }
-
-    header p {
-      color: #ccc;
-      font-size: 16px;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+      margin: 10px 0;
     }
 
     h2 {
       color: #d4af37;
       text-align: center;
       margin-bottom: 30px;
+    }
+
+    p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
     }
 
     .services, .gallery {
@@ -56,17 +57,11 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(212,175,55,0.15);
-      text-align: center;
     }
 
     .card h3 {
       color: #d4af37;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 14px;
+      margin-top: 0;
     }
 
     .gallery div {
@@ -81,9 +76,9 @@
     }
 
     .cta {
-      text-align: center;
       background: #111;
-      padding: 50px 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
 
     .cta a {
@@ -91,10 +86,11 @@
       margin-top: 20px;
       background: #d4af37;
       color: #000;
-      padding: 15px 30px;
+      padding: 15px 35px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
     footer {
@@ -102,84 +98,81 @@
       padding: 20px;
       font-size: 14px;
       color: #777;
+      background: #000;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <!-- Cuando subas tu logo, nómbralo: logo.png -->
-  <img src="logo.png" alt="Dental Digital CR" />
-  <h1>Dental Digital CR</h1>
-  <p>Laboratorio Dental Digital para Odontólogos y Clínicas</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="./logo.png" alt="Dental Digital CR Logo">
+    <h1>Dental Digital CR</h1>
+    <p>Laboratorio Dental Digital</p>
+  </header>
 
-<section>
-  <h2>Sobre Nosotros</h2>
-  <p style="text-align:center; color:#ccc;">
-    Somos un laboratorio dental digital especializado en diseños nacionales e internacionales.
-    Trabajamos con odontólogos y clínicas ofreciendo precisión, tiempos eficientes y soporte técnico
-    para cada caso.
-  </p>
-</section>
+  <!-- SOBRE NOSOTROS -->
+  <section>
+    <h2>Sobre Nosotros</h2>
+    <p style="text-align:center;">
+      Somos un laboratorio dental especializado en diseños digitales nacionales e internacionales,
+      enfocados en alta precisión, estética y calidad para odontólogos y clínicas dentales.
+    </p>
+  </section>
 
-<section>
-  <h2>Servicios</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Diseño Digital CAD/CAM</h3>
-      <p>Diseños digitales listos para producción clínica nacional e internacional.</p>
+  <!-- SERVICIOS -->
+  <section>
+    <h2>Servicios</h2>
+    <div class="services">
+
+      <div class="card">
+        <h3>Diseño Digital CAD/CAM</h3>
+        <p>Diseños dentales digitales para casos nacionales e internacionales.</p>
+      </div>
+
+      <div class="card">
+        <h3>Impresión 3D</h3>
+        <p>Coronas, splints, férulas, modelos y cargas inmediatas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Prótesis Dentales</h3>
+        <p>Prótesis acrílicas y flexibles de alta calidad.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ortodoncia</h3>
+        <p>Aparatología de ortodoncia personalizada.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Coronas e Impresiones 3D</h3>
-      <p>Coronas, modelos, estructuras y provisionales impresos.</p>
+  <!-- GALERÍA -->
+  <section>
+    <h2>Galería de Trabajos</h2>
+    <div class="gallery">
+      <div>Foto real 1</div>
+      <div>Foto real 2</div>
+      <div>Foto real 3</div>
+      <div>Foto real 4</div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Splints y Férulas</h3>
-      <p>Férulas y splints con alta precisión y comodidad.</p>
-    </div>
+  <!-- CONTACTO -->
+  <section class="cta">
+    <h2>Contáctanos</h2>
+    <p>Trabajemos juntos en tus próximos casos dentales</p>
+    <a href="https://wa.me/50672640280" target="_blank">
+      Escríbenos por WhatsApp
+    </a>
+  </section>
 
-    <div class="card">
-      <h3>Implantes y Cargas Inmediatas</h3>
-      <p>Planificación digital y soluciones avanzadas sobre implantes.</p>
-    </div>
-
-    <div class="card">
-      <h3>Prótesis Acrílicas y Flexibles</h3>
-      <p>Prótesis funcionales, estéticas y duraderas.</p>
-    </div>
-
-    <div class="card">
-      <h3>Aparatología de Ortodoncia</h3>
-      <p>Aparatología personalizada para tratamientos ortodónticos.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Galería de Trabajos</h2>
-  <div class="gallery">
-    <div>Trabajo real 1</div>
-    <div>Trabajo real 2</div>
-    <div>Trabajo real 3</div>
-    <div>Trabajo real 4</div>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Contáctanos</h2>
-  <p style="color:#ccc;">
-    Escríbenos directamente por WhatsApp y envíanos tu caso digital
-  </p>
-  <a href="https://wa.me/50672640280">Escríbenos por WhatsApp</a>
-</section>
-
-<footer>
-  © 2025 Dental Digital CR · Laboratorio Dental
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Dental Digital CR · Laboratorio Dental
+  </footer>
 
 </body>
-</html><img src="./logo.png" alt="Dental Digital CR" style="max-width:200px;">
+</html>
