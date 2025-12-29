@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dental Digital CR | Laboratorio Dental Digital</title>
+  <title>Dental Digital CR | Digital Dental Laboratory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -31,7 +31,7 @@
 
     header p {
       color: #ccc;
-      max-width: 750px;
+      max-width: 780px;
       margin: auto;
       font-size: 17px;
     }
@@ -99,6 +99,17 @@
       font-size: 14px;
     }
 
+    .contact {
+      text-align: center;
+      background: #111;
+      padding: 50px 20px;
+    }
+
+    .contact p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -111,35 +122,27 @@
       position: fixed;
       bottom: 22px;
       right: 22px;
-      width: 56px;
-      height: 56px;
       background-color: #25D366;
       color: #000;
-      border-radius: 50%;
+      border-radius: 40px;
+      padding: 14px 22px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      text-decoration: none;
+      gap: 10px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.35);
       z-index: 1000;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s ease;
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+      transform: scale(1.05);
     }
 
-    @media (min-width: 768px) {
-      .whatsapp-float {
-        width: auto;
-        padding: 14px 22px;
-        border-radius: 40px;
-        font-size: 16px;
-        font-weight: bold;
-        gap: 10px;
-      }
+    .whatsapp-icon {
+      font-size: 22px;
     }
   </style>
 </head>
@@ -167,38 +170,48 @@
 </section>
 
 <section>
-  <h2>Servicios</h2>
+  <h2>Our Laboratory</h2>
+  <p style="text-align:center; color:#ccc;">
+    Dental Digital CR is a digital dental laboratory focused on providing high-precision,
+    aesthetic and reliable solutions for dental professionals worldwide. We work with
+    advanced CAD/CAM technology and digital workflows to deliver predictable and
+    functional results, becoming a trusted partner for dentists and clinics.
+  </p>
+</section>
+
+<section>
+  <h2>Servicios / Services</h2>
   <div class="services">
 
     <div class="card">
-      <h3>Diseño Digital</h3>
+      <h3>Digital Design</h3>
       <p>
-        Diseño de coronas unitarias, puentes, carillas, coronas sobre implantes,
-        rehabilitaciones completas, All-on-X y planificación de aligners.
+        Crowns, bridges, veneers, implant-supported crowns, full rehabilitations,
+        All-on-X and aligner planning.
       </p>
     </div>
 
     <div class="card">
-      <h3>Impresión 3D</h3>
+      <h3>3D Printing</h3>
       <p>
-        Impresión de coronas provisionales, férulas, splints, modelos 3D,
-        guías quirúrgicas y cargas inmediatas.
+        Provisional crowns, splints, dental models, surgical guides
+        and immediate load solutions.
       </p>
     </div>
 
     <div class="card">
-      <h3>Prótesis Dentales</h3>
+      <h3>Dental Prosthetics</h3>
       <p>
-        Prótesis acrílicas y flexibles, trabajos personalizados y soluciones
-        adaptadas a cada requerimiento clínico.
+        Acrylic and flexible prosthetics, customized solutions
+        according to clinical requirements.
       </p>
     </div>
 
     <div class="card">
-      <h3>Aparatología de Ortodoncia</h3>
+      <h3>Orthodontic Appliances</h3>
       <p>
-        Aparatología funcional y trabajos de ortodoncia elaborados
-        con precisión digital.
+        Functional orthodontic appliances and digitally manufactured
+        orthodontic solutions.
       </p>
     </div>
 
@@ -206,32 +219,40 @@
 </section>
 
 <section>
-  <h2>Galería de Trabajos</h2>
+  <h2>Galería / Gallery</h2>
   <div class="gallery">
 
     <div class="gallery-item">
-      <img src="galeria/ferula.jpg" alt="Férula dental">
-      <p>Férulas y Splints</p>
+      <img src="galeria/ferula.jpg" alt="Dental splint">
+      <p>Férulas / Splints</p>
     </div>
 
     <div class="gallery-item">
-      <img src="galeria/modelo3d.jpg" alt="Modelo 3D dental">
-      <p>Modelos 3D</p>
+      <img src="galeria/modelo3d.jpg" alt="3D dental model">
+      <p>Modelos 3D / 3D Models</p>
     </div>
 
   </div>
 </section>
 
+<section class="contact">
+  <h2>Contacto / Contact</h2>
+  <p>
+    📧 Correo electrónico / Email: <br>
+    <strong>contacto@dentaldigitalcr.com</strong>
+  </p>
+</section>
+
 <footer>
-  © 2025 Dental Digital CR · Laboratorio Dental
+  © 2025 Dental Digital CR · Digital Dental Laboratory
 </footer>
 
 <!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/50672640280?text=Hola%2C%20soy%20odont%C3%B3logo(a)%20y%20me%20gustar%C3%ADa%20cotizar%20un%20caso%20con%20Dental%20Digital%20CR."
+<a href="https://wa.me/50672640280?text=Hello%2C%20I%20am%20a%20dentist%20and%20I%20would%20like%20to%20request%20a%20quote%20with%20Dental%20Digital%20CR."
    class="whatsapp-float"
    target="_blank"
    aria-label="WhatsApp Dental Digital CR">
-   📞 Cotizar
+   <span class="whatsapp-icon">🟢</span> WhatsApp
 </a>
 
 </body>
