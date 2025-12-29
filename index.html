@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Dental Digital CR | Laboratorio Dental Digital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet"
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -25,8 +24,9 @@ header img {
   max-width: 200px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #d4af37;
+  text-align: center;
 }
 
 section {
@@ -55,166 +55,3 @@ section {
 }
 
 .btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 14px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn-whatsapp {
-  background: #25D366;
-  color: #000;
-}
-
-.btn-gold {
-  background: #d4af37;
-  color: #000;
-}
-
-/* Idiomas */
-.en { display: none; }
-
-/* Selector idioma */
-.language-switch {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-}
-
-.language-switch button {
-  background: #d4af37;
-  border: none;
-  padding: 8px 12px;
-  margin-left: 5px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* WhatsApp flotante */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: #000;
-  text-decoration: none;
-}
-</style>
-</head>
-
-<body>
-
-<!-- Selector de idioma -->
-<div class="language-switch">
-  <button onclick="setLang('es')">ES</button>
-  <button onclick="setLang('en')">EN</button>
-</div>
-
-<header>
-  <img src="logo.png" alt="Dental Digital CR">
-  <h1>Dental Digital CR</h1>
-  <p class="es">Laboratorio Dental Digital</p>
-  <p class="en">Digital Dental Laboratory</p>
-</header>
-
-<section>
-  <h2 class="es">Sobre Nosotros</h2>
-  <h2 class="en">About Us</h2>
-
-  <p class="es">
-    Somos un laboratorio dental digital especializado en el diseño y fabricación
-    de coronas, puentes, carillas, prótesis sobre implantes y soluciones All-on-X,
-    orientado a clínicas y laboratorios dentales.
-  </p>
-
-  <p class="en">
-    We are a digital dental laboratory specialized in the design and manufacturing
-    of crowns, bridges, veneers, implant prosthetics and All-on-X solutions,
-    focused on dental clinics and laboratories.
-  </p>
-</section>
-
-<section>
-  <h2 class="es">Servicios</h2>
-  <h2 class="en">Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <p class="es">Diseño digital de coronas, puentes y carillas</p>
-      <p class="en">Digital design of crowns, bridges and veneers</p>
-    </div>
-
-    <div class="card">
-      <p class="es">Coronas sobre implantes y All-on-X</p>
-      <p class="en">Implant crowns and All-on-X solutions</p>
-    </div>
-
-    <div class="card">
-      <p class="es">Férulas, splints y ortodoncia</p>
-      <p class="en">Splints and orthodontic appliances</p>
-    </div>
-
-    <div class="card">
-      <p class="es">Modelos 3D e impresiones</p>
-      <p class="en">3D models and printing</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="es">Galería</h2>
-  <h2 class="en">Gallery</h2>
-
-  <div class="gallery">
-    <div class="card">
-      <img src="galeria/coronas.jpg">
-      <p class="es">Coronas Dentales</p>
-      <p class="en">Dental Crowns</p>
-    </div>
-
-    <div class="card">
-      <img src="galeria/ferula.jpg">
-      <p class="es">Férulas Dentales</p>
-      <p class="en">Dental Splints</p>
-    </div>
-  </div>
-</section>
-
-<section style="text-align:center">
-  <a class="btn btn-whatsapp" href="https://wa.me/50672640280" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
-
-  <a class="btn btn-gold" href="envio-casos.html">
-    <span class="es">Enviar Caso</span>
-    <span class="en">Send Case</span>
-  </a>
-</section>
-
-<footer style="text-align:center; padding:30px; color:#777;">
-  © 2025 Dental Digital CR
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/50672640280" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-function setLang(lang) {
-  document.querySelectorAll('.es').forEach(el => el.style.display = lang === 'es' ? 'block' : 'none');
-  document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-}
-</script>
-
-</body>
-</html>
