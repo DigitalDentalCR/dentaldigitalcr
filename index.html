@@ -2,48 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dental Digital CR | Laboratorio Dental</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
+      font-family: Arial, sans-serif;
+      background: #000;
       color: #fff;
     }
 
     header {
-      text-align: center;
       padding: 40px 20px;
-      background-color: #000;
+      text-align: center;
+      background: #000;
     }
 
     header img {
-      max-width: 200px;
-      margin-bottom: 20px;
+      max-width: 180px;
+      margin-bottom: 15px;
     }
 
-    h1 {
+    header h1 {
       color: #d4af37;
       margin: 10px 0;
+    }
+
+    header p {
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     h2 {
       color: #d4af37;
       text-align: center;
       margin-bottom: 30px;
-    }
-
-    p {
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
     }
 
     .services, .gallery {
@@ -56,12 +57,12 @@
       background: #111;
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(212,175,55,0.15);
+      box-shadow: 0 0 12px rgba(212,175,55,0.15);
     }
 
     .card h3 {
       color: #d4af37;
-      margin-top: 0;
+      margin-bottom: 10px;
     }
 
     .gallery div {
@@ -72,25 +73,24 @@
       align-items: center;
       justify-content: center;
       color: #777;
-      font-size: 14px;
     }
 
     .cta {
-      background: #111;
       text-align: center;
+      background: #111;
       padding: 60px 20px;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 20px;
-      background: #d4af37;
+      background: #25D366;
       color: #000;
       padding: 15px 35px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
+      margin-top: 20px;
     }
 
     footer {
@@ -98,81 +98,95 @@
       padding: 20px;
       font-size: 14px;
       color: #777;
-      background: #000;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="./logo.png" alt="Dental Digital CR Logo">
-    <h1>Dental Digital CR</h1>
-    <p>Laboratorio Dental Digital</p>
-  </header>
+<header>
+  <img src="logo.png" alt="Dental Digital CR">
+  <h1>Dental Digital CR</h1>
+  <p>
+    Laboratorio dental digital especializado en apoyar a odontólogos con
+    soluciones de alta precisión, estética y confiabilidad a nivel nacional
+    e internacional.
+  </p>
+</header>
 
-  <!-- SOBRE NOSOTROS -->
-  <section>
-    <h2>Sobre Nosotros</h2>
-    <p style="text-align:center;">
-      Somos un laboratorio dental especializado en diseños digitales nacionales e internacionales,
-      enfocados en alta precisión, estética y calidad para odontólogos y clínicas dentales.
-    </p>
-  </section>
+<section>
+  <h2>Sobre Nosotros</h2>
+  <p style="text-align:center; color:#ccc;">
+    En Dental Digital CR somos un laboratorio dental especializado en
+    odontología digital. Trabajamos con flujos CAD/CAM y tecnología avanzada
+    para ofrecer diseños precisos, funcionales y estéticamente superiores,
+    convirtiéndonos en un aliado estratégico para el odontólogo.
+  </p>
+</section>
 
-  <!-- SERVICIOS -->
-  <section>
-    <h2>Servicios</h2>
-    <div class="services">
-
-      <div class="card">
-        <h3>Diseño Digital CAD/CAM</h3>
-        <p>Diseños dentales digitales para casos nacionales e internacionales.</p>
-      </div>
-
-      <div class="card">
-        <h3>Impresión 3D</h3>
-        <p>Coronas, splints, férulas, modelos y cargas inmediatas.</p>
-      </div>
-
-      <div class="card">
-        <h3>Prótesis Dentales</h3>
-        <p>Prótesis acrílicas y flexibles de alta calidad.</p>
-      </div>
-
-      <div class="card">
-        <h3>Ortodoncia</h3>
-        <p>Aparatología de ortodoncia personalizada.</p>
-      </div>
-
+<section>
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Diseño Digital</h3>
+      <p>
+        Coronas, puentes, carillas, coronas sobre implantes,
+        rehabilitaciones completas, All-on-X y diseño de aligners.
+      </p>
     </div>
-  </section>
 
-  <!-- GALERÍA -->
-  <section>
-    <h2>Galería de Trabajos</h2>
-    <div class="gallery">
-      <div>Foto real 1</div>
-      <div>Foto real 2</div>
-      <div>Foto real 3</div>
-      <div>Foto real 4</div>
+    <div class="card">
+      <h3>Impresión 3D</h3>
+      <p>
+        Impresión de coronas provisionales, férulas, splints,
+        modelos 3D y cargas inmediatas.
+      </p>
     </div>
-  </section>
 
-  <!-- CONTACTO -->
-  <section class="cta">
-    <h2>Contáctanos</h2>
-    <p>Trabajemos juntos en tus próximos casos dentales</p>
-    <a href="https://wa.me/50672640280" target="_blank">
-      Escríbenos por WhatsApp
-    </a>
-  </section>
+    <div class="card">
+      <h3>Prótesis Dentales</h3>
+      <p>
+        Prótesis acrílicas y flexibles, soluciones personalizadas
+        según requerimientos clínicos.
+      </p>
+    </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Dental Digital CR · Laboratorio Dental
-  </footer>
+    <div class="card">
+      <h3>Aparatología de Ortodoncia</h3>
+      <p>
+        Aparatos funcionales y trabajos personalizados para tratamientos
+        ortodónticos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Galería</h2>
+  <div class="gallery">
+    <div>Próximamente</div>
+    <div>Fotos reales</div>
+    <div>De nuestros</div>
+    <div>Trabajos</div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Contáctanos</h2>
+  <p style="color:#ccc;">
+    ¿Eres odontólogo y deseas cotizar un caso?
+    Escríbenos directamente por WhatsApp.
+  </p>
+
+  <a href="https://wa.me/50672640280?text=Hola%2C%20soy%20odont%C3%B3logo(a)%20y%20me%20gustar%C3%ADa%20cotizar%20un%20caso%20con%20Dental%20Digital%20CR."
+     target="_blank">
+    💬 Cotizar por WhatsApp
+  </a>
+</section>
+
+<footer>
+  © 2025 Dental Digital CR · Laboratorio Dental
+</footer>
 
 </body>
 </html>
