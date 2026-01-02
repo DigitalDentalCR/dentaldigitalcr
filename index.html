@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dental Digital CR | Digital Dental Laboratory</title>
-  <meta name="description" content="Dental Digital CR - Laboratorio dental digital especializado en diseño CAD/CAM, coronas, puentes, prótesis, impresión 3D y soporte para clínicas y laboratorios dentales.">
+  <title>Dental Digital CR | Laboratorio Dental Digital</title>
+  <meta name="description" content="Laboratorio dental digital especializado en prótesis flexibles, diseño CAD/CAM e impresión 3D para clínicas y laboratorios dentales.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -24,110 +24,60 @@
       margin-bottom: 20px;
     }
 
-    header h1 {
+    h1, h2 {
       color: #d4af37;
-      margin-bottom: 10px;
+      text-align: center;
     }
 
-    header p {
+    p {
       color: #ccc;
       max-width: 900px;
       margin: auto;
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.6;
-    }
-
-    .lang-switch {
-      margin-top: 20px;
-    }
-
-    .lang-switch button {
-      background: #111;
-      color: #d4af37;
-      border: 1px solid #d4af37;
-      padding: 8px 18px;
-      margin: 5px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
+      text-align: center;
     }
 
     section {
-      max-width: 1150px;
+      max-width: 1100px;
       margin: auto;
       padding: 60px 20px;
     }
 
-    h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background-color: #111;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 0 18px rgba(212,175,55,0.18);
-    }
-
-    .card h3 {
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
     }
 
     .gallery-item {
       background: #111;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 0 16px rgba(212,175,55,0.15);
+      box-shadow: 0 0 18px rgba(212,175,55,0.2);
+      max-width: 420px;
       text-align: center;
     }
 
     .gallery-item img {
       width: 100%;
-      height: 230px;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
 
     .gallery-item p {
-      color: #ccc;
-      padding: 14px;
-      font-size: 14px;
-    }
-
-    .contact {
-      text-align: center;
-      color: #ccc;
-      font-size: 16px;
+      padding: 15px;
+      font-size: 15px;
     }
 
     footer {
       text-align: center;
-      padding: 22px;
+      padding: 25px;
       font-size: 14px;
       color: #777;
     }
 
-    /* WhatsApp floating button */
+    /* WhatsApp flotante */
     .whatsapp-float {
       position: fixed;
       bottom: 22px;
@@ -149,110 +99,19 @@
       width: 22px;
       height: 22px;
     }
-
-    .en { display: none; }
   </style>
-
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
-      document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
-    }
-  </script>
 </head>
 
-<body onload="setLang('es')">
+<body>
 
 <header>
   <img src="logo.png" alt="Dental Digital CR">
   <h1>Dental Digital CR</h1>
-
-  <p class="es">
-    Laboratorio dental digital especializado en apoyar <strong>clínicas y laboratorios dentales</strong>
-    mediante soluciones CAD/CAM, impresión 3D y planificación digital con altos estándares de precisión,
-    estética y confiabilidad.
+  <p>
+    Laboratorio dental digital especializado en apoyar clínicas y laboratorios dentales
+    mediante soluciones CAD/CAM, impresión 3D y prótesis flexibles de alta precisión y estética.
   </p>
-
-  <p class="en">
-    Digital dental laboratory focused on supporting <strong>dental clinics and laboratories</strong>
-    with CAD/CAM solutions, 3D printing and digital planning with high precision and reliability.
-  </p>
-
-  <div class="lang-switch">
-    <button onclick="setLang('es')">Español</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
 </header>
 
 <section>
-  <h2 class="es">Nuestros Servicios</h2>
-  <h2 class="en">Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>Diseño Digital CAD/CAM</h3>
-      <p class="es">Coronas, puentes, carillas, coronas sobre implantes y casos All-on-X.</p>
-      <p class="en">Crowns, bridges, veneers, implant restorations and All-on-X cases.</p>
-    </div>
-
-    <div class="card">
-      <h3>Impresión 3D</h3>
-      <p class="es">Férulas, splints, modelos 3D, guías quirúrgicas y cargas inmediatas.</p>
-      <p class="en">Splints, 3D models, surgical guides and immediate load cases.</p>
-    </div>
-
-    <div class="card">
-      <h3>Prótesis Dentales</h3>
-      <p class="es">Prótesis acrílicas y flexibles para clínicas y laboratorios aliados.</p>
-      <p class="en">Acrylic and flexible prosthetics for partner clinics and labs.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ortodoncia Digital</h3>
-      <p class="es">Alineadores y aparatología con planificación digital.</p>
-      <p class="en">Aligners and orthodontic appliances with digital planning.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="es">Galería de Casos</h2>
-  <h2 class="en">Case Gallery</h2>
-
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="coronas.jpg" alt="Coronas dentales">
-      <p>Coronas Dentales</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="flexible.jpg" alt="Prótesis flexible">
-      <p>Prótesis Flexible</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="ferula.jpg" alt="Férulas dentales">
-      <p>Férulas y Splints</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="modelo3d.jpg" alt="Modelo dental 3D">
-      <p>Modelos 3D</p>
-    </div>
-  </div>
-</section>
-
-<section class="contact">
-  <p><strong>Email:</strong> contacto@dentaldigitalcr.com</p>
-  <p class="es">Atendemos clínicas y laboratorios a nivel nacional e internacional.</p>
-  <p class="en">We work with clinics and laboratories worldwide.</p>
-</section>
-
-<footer>
-  © 2025 Dental Digital CR · Digital Dental Laboratory
-</footer>
-
-<a href="https://wa.me/50672640280?text=Hola%2C%20represento%20una%20clínica%20o%20laboratorio%20dental%20y%20me%20gustaría%20recibir%20información."
-   class="whatsapp-float"
-   target="_blank">
-  <img src="https://upload.wikimedia.org/w
+  <h2>Prótesis Flexibles</h2>
