@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>Dental Digital CR | Laboratorio Dental Digital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 body {
@@ -15,30 +15,31 @@ body {
   color: #fff;
 }
 
-/* Títulos centrados */
-h1, h2, h3 { text-align: center; color: #d4af37; }
+h1, h2, h3 {
+  text-align: center;
+  color: #d4af37;
+}
 
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 55px 20px;
 }
 
 header img {
   max-width: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 header p {
   color: #ccc;
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .lang-switch {
-  text-align: center;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .lang-switch button {
@@ -52,44 +53,54 @@ header p {
   font-weight: bold;
 }
 
-section { max-width: 1150px; margin: auto; padding: 60px 20px; }
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 20px;
+}
 
 .services, .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 30px;
 }
 
 .card, .gallery-item {
-  background-color: #111;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 0 18px rgba(212,175,55,0.18);
+  background: #111;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 0 22px rgba(212,175,55,0.15);
   text-align: center;
 }
 
-.card h3 { margin-bottom: 10px; }
-.card p, .gallery-item p { color: #ccc; font-size: 15px; line-height: 1.5; }
+.card p, .gallery-item p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
 
 .gallery-item img {
   width: 100%;
-  height: 230px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(212,175,55,0.35);
+}
+
+.en { display: none; }
 
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 14px 30px;
+  padding: 14px 34px;
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-}
-
-.btn-whatsapp {
-  background: #25D366;
-  color: #000;
 }
 
 .btn-gold {
@@ -97,136 +108,11 @@ section { max-width: 1150px; margin: auto; padding: 60px 20px; }
   color: #000;
 }
 
-.en { display: none; }
-
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
+  bottom: 22px;
+  right: 22px;
+  background: #25D366;
   color: #000;
-  padding: 14px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  z-index: 1000;
-  transition: transform 0.2s;
-}
-
-.whatsapp-float:hover { transform: scale(1.1); }
-
-.whatsapp-float i { font-size: 22px; }
-
-footer { text-align: center; padding: 25px; color: #777; font-size: 14px; }
-</style>
-
-<script>
-function setLang(lang) {
-  document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
-  document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
-}
-</script>
-</head>
-
-<body onload="setLang('es')">
-
-<header>
-  <img src="logo.png" alt="Dental Digital CR">
-  <h1>Dental Digital CR</h1>
-
-  <p class="es">
-    Laboratorio dental digital enfocado en apoyar <strong>clínicas y laboratorios dentales</strong>
-    mediante soluciones digitales de alta precisión, estética y confiabilidad.
-    Trabajamos como aliados estratégicos para optimizar tiempos, costos y resultados clínicos.
-  </p>
-
-  <p class="en">
-    Digital dental laboratory focused on supporting <strong>dental clinics and laboratories</strong>
-    with high-precision digital solutions. We work as strategic partners to improve workflow,
-    costs, and clinical outcomes.
-  </p>
-
-  <div class="lang-switch">
-    <button onclick="setLang('es')">Español</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
-</header>
-
-<section>
-  <h2 class="es">Nuestros Servicios</h2>
-  <h2 class="en">Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>Diseño Digital CAD/CAM</h3>
-      <p class="es">Coronas, puentes, carillas, coronas sobre implantes, All-on-X y rehabilitaciones completas.</p>
-      <p class="en">CAD/CAM design of crowns, bridges, veneers, implant restorations, All-on-X and full rehabilitations.</p>
-    </div>
-    <div class="card">
-      <h3>Impresión 3D Profesional</h3>
-      <p class="es">Coronas provisionales, férulas, splints, modelos 3D, guías quirúrgicas y cargas inmediatas.</p>
-      <p class="en">Provisional crowns, splints, 3D models, surgical guides and immediate load cases.</p>
-    </div>
-    <div class="card">
-      <h3>Prótesis Dentales</h3>
-      <p class="es">Acrílicas y flexibles, como soporte productivo para clínicas y laboratorios aliados.</p>
-      <p class="en">Acrylic and flexible prosthetics developed as production support for partner clinics and labs.</p>
-    </div>
-    <div class="card">
-      <h3>Ortodoncia Digital</h3>
-      <p class="es">Planificación digital y soporte en aparatología y alineadores para clínicas de ortodoncia.</p>
-      <p class="en">Digital planning and orthodontic appliance support for clinics.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="es">Galería de Trabajos</h2>
-  <h2 class="en">Work Gallery</h2>
-
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="galeria/flexible.jpg" alt="Prótesis flexible">
-      <p class="es">Prótesis Flexibles</p>
-      <p class="en">Flexible Prosthetics</p>
-    </div>
-    <div class="gallery-item">
-      <img src="galeria/coronas.jpg" alt="Coronas dentales">
-      <p class="es">Coronas Dentales</p>
-      <p class="en">Dental Crowns</p>
-    </div>
-    <div class="gallery-item">
-      <img src="galeria/ferula.jpg" alt="Férulas dentales">
-      <p class="es">Férulas y Splints</p>
-      <p class="en">Dental Splints</p>
-    </div>
-    <div class="gallery-item">
-      <img src="galeria/modelos3d.png" alt="Modelos 3d">
-      <p class="es">Modelos 3d</p>
-      <p class="en">3d Models</p>
-    </div>
-  </div>
-</section>
-
-<section style="text-align:center; padding:50px 20px;">
-  <a class="btn btn-gold" href="envio-casos.html">
-    <span class="es">Enviar Caso</span>
-    <span class="en">Send Case</span>
-  </a>
-</section>
-
-<footer>
-  © 2025 Dental Digital CR · Laboratorio Dental Digital
-</footer>
-
-<!-- WhatsApp flotante mejorado -->
-<a href="https://wa.me/50672640280" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-
-</body>
-</html>
+  padding: 14px 22px;
+  border-radius: 50px
