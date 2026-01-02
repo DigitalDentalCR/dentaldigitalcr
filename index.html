@@ -115,4 +115,92 @@ section {
   background: #25D366;
   color: #000;
   padding: 14px 22px;
-  border-radius: 50px
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 14px;
+}
+</style>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
+  document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+}
+</script>
+</head>
+
+<body onload="setLang('es')">
+
+<header>
+  <img src="logo.png" alt="Dental Digital CR">
+  <h1>Dental Digital CR</h1>
+
+  <p class="es">
+    Laboratorio dental digital enfocado en apoyar <strong>clínicas y laboratorios dentales</strong>
+    mediante soluciones CAD/CAM, impresión 3D y diseño de alta precisión.
+  </p>
+
+  <p class="en">
+    Digital dental laboratory supporting <strong>dental clinics and laboratories</strong>
+    with CAD/CAM design, 3D printing and high-precision workflows.
+  </p>
+
+  <div class="lang-switch">
+    <button onclick="setLang('es')">Español</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+</header>
+
+<section>
+<h2 class="es">Galería de Trabajos</h2>
+<h2 class="en">Work Gallery</h2>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="galeria/flexible.jpg">
+    <p class="es">Prótesis Flexibles</p>
+    <p class="en">Flexible Prosthetics</p>
+  </div>
+
+  <div class="gallery-item">
+    <img src="galeria/coronas.jpg">
+    <p class="es">Coronas Dentales</p>
+    <p class="en">Dental Crowns</p>
+  </div>
+
+  <div class="gallery-item">
+    <img src="galeria/ferula.jpg">
+    <p class="es">Férulas y Splints</p>
+    <p class="en">Dental Splints</p>
+  </div>
+
+  <div class="gallery-item">
+    <img src="galeria/modelos3d.png">
+    <p class="es">Modelos 3D</p>
+    <p class="en">3D Models</p>
+  </div>
+</div>
+</section>
+
+<footer>
+© 2025 Dental Digital CR · Laboratorio Dental Digital
+</footer>
+
+<a href="https://wa.me/50672640280" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+</body>
+</html>
