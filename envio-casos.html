@@ -1,57 +1,12 @@
-[1:16 p.m., 2/1/2026] 🍃: <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Dental Digital CR | Laboratorio Dental Digital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-h1, h2, h3 {
-  text-align: center;
-  color: #d4af37;
-}
-
-header {
-  text-align: center;
-  padding: 55px 20px;
-}
-
-header img {
-  max-width: 200px;
-  margin-bottom: 18px;
-}
-
-header p {
-  color: #ccc;
-  max-width: 950px;
-  margin: auto;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.lang-switch {
-  margin-top: 20px;
-}
-
-.lang-switch button {
-  background:…
-[1:21 p.m., 2/1/2026] 🍃: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <title>Enviar Caso | Dental Digital CR</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 body {
@@ -61,37 +16,34 @@ body {
   color: #fff;
 }
 
-h1, h2 {
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h1 {
   text-align: center;
   color: #d4af37;
 }
 
-header {
+p {
   text-align: center;
-  padding: 50px 20px;
-}
-
-header img {
-  max-width: 180px;
-  margin-bottom: 15px;
-}
-
-section {
-  max-width: 700px;
-  margin: auto;
-  padding: 40px 20px;
+  color: #ccc;
+  margin-bottom: 30px;
 }
 
 form {
   background: #111;
-  padding: 30px;
+  padding: 35px;
   border-radius: 18px;
-  box-shadow: 0 0 22px rgba(212,175,55,0.2);
+  box-shadow: 0 0 25px rgba(212,175,55,0.2);
 }
 
 label {
   display: block;
   margin-top: 18px;
+  margin-bottom: 6px;
   color: #d4af37;
   font-weight: bold;
 }
@@ -99,137 +51,136 @@ label {
 input, select, textarea {
   width: 100%;
   padding: 12px;
-  margin-top: 6px;
   border-radius: 10px;
   border: none;
+  font-size: 15px;
+}
+
+input[type="file"] {
   background: #000;
-  color: #fff;
+  color: #ccc;
 }
 
 textarea {
   resize: vertical;
+  min-height: 120px;
+}
+
+.note {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 6px;
 }
 
 button {
-  margin-top: 30px;
   width: 100%;
+  margin-top: 30px;
   padding: 16px;
-  border-radius: 30px;
   background: #25D366;
   color: #000;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.lang-switch {
+.back {
+  display: block;
   text-align: center;
-  margin-top: 15px;
-}
-
-.lang-switch button {
-  background: #111;
+  margin-top: 25px;
   color: #d4af37;
-  border: 1px solid #d4af37;
-  padding: 8px 18px;
-  margin: 5px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.en { display: none; }
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #777;
-  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll('.es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
-  document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
-}
+function enviarWhatsApp() {
+  const clinica = document.getElementById("clinica").value;
+  const telefono = document.getElementById("telefono").value;
+  const correo = document.getElementById("correo").value;
+  const tipo = document.getElementById("tipo").value;
+  const detalles = document.getElementById("detalles").value;
 
-function sendWhatsApp() {
-  const data = {
-    clinica: document.getElementById('clinica').value,
-    doctor: document.getElementById('doctor').value,
-    telefono: document.getElementById('telefono').value,
-    trabajo: document.getElementById('trabajo').value,
-    descripcion: document.getElementById('descripcion').value
-  };
+  const mensaje =
+`Hola Dental Digital CR,
+Adjunto archivos para el siguiente caso:
 
-  const msg =
-`📦 Nuevo Caso Dental
-🏥 Clínica: ${data.clinica}
-👨‍⚕️ Doctor: ${data.doctor}
-📞 Teléfono: ${data.telefono}
-🦷 Trabajo: ${data.trabajo}
-📝 Detalles: ${data.descripcion}`;
+🏥 Clínica: ${clinica}
+📞 Teléfono: ${telefono}
+📧 Correo: ${correo}
+🦷 Tipo de trabajo: ${tipo}
 
-  window.open(https://wa.me/50672640280?text=${encodeURIComponent(msg)}, '_blank');
+📋 Detalles del caso:
+${detalles}
+
+📎 Archivos adjuntos enviados en este chat`;
+
+  const url = "https://wa.me/50672640280?text=" + encodeURIComponent(mensaje);
+  window.open(url, "_blank");
 }
 </script>
 </head>
 
-<body onload="setLang('es')">
+<body>
 
-<header>
-  <img src="logo.png" alt="Dental Digital CR">
-  <h1 class="es">Enviar Caso</h1>
-  <h1 class="en">Send a Case</h1>
+<div class="container">
+  <h1>Enviar Caso</h1>
+  <p>
+    Adjunte archivos STL, fotos clínicas o documentos.
+    Nuestro equipo dará seguimiento personalizado.
+  </p>
 
-  <div class="lang-switch">
-    <button onclick="setLang('es')">Español</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
-</header>
+  <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
-<section>
-<form onsubmit="event.preventDefault(); sendWhatsApp();">
+    <label>Nombre de la Clínica o Laboratorio</label>
+    <input type="text" id="clinica" required>
 
-  <label class="es">Nombre de la Clínica / Laboratorio</label>
-  <label class="en">Clinic / Lab Name</label>
-  <input id="clinica" required>
+    <label>Teléfono de Contacto</label>
+    <input type="tel" id="telefono" required>
 
-  <label class="es">Doctor / Técnico Responsable</label>
-  <label class="en">Doctor / Technician</label>
-  <input id="doctor" required>
+    <label>Correo Electrónico</label>
+    <input type="email" id="correo" required>
 
-  <label class="es">Teléfono de Contacto</label>
-  <label class="en">Contact Phone</label>
-  <input id="telefono" required>
+    <label>Tipo de Trabajo</label>
+    <select id="tipo" required>
+      <option value="">Seleccione una opción</option>
+      <option>Coronas</option>
+      <option>Puentes</option>
+      <option>Carillas</option>
+      <option>Coronas sobre implantes</option>
+      <option>All-on-X</option>
+      <option>Prótesis flexible</option>
+      <option>Férulas / Splints</option>
+      <option>Modelos 3D</option>
+      <option>Alineadores</option>
+      <option>Otro</option>
+    </select>
 
-  <label class="es">Tipo de Trabajo</label>
-  <label class="en">Type of Work</label>
-  <select id="trabajo">
-    <option>Coronas / Bridges</option>
-    <option>Carillas</option>
-    <option>Implantes / All-on-X</option>
-    <option>Prótesis Flexible</option>
-    <option>Férulas / Splints</option>
-    <option>Modelos 3D</option>
-    <option>Otro</option>
-  </select>
+    <label>Adjuntar Archivos (STL / Fotos / PDF)</label>
+    <input type="file" multiple accept=".stl,.jpg,.jpeg,.png,.pdf">
+    <div class="note">
+      Los archivos se adjuntarán manualmente al abrir WhatsApp.
+    </div>
 
-  <label class="es">Detalles del Caso</label>
-  <label class="en">Case Details</label>
-  <textarea id="descripcion" rows="5"></textarea>
+    <label>Detalles del Caso</label>
+    <textarea id="detalles"
+      placeholder="Piezas, material, fecha requerida, indicaciones clínicas, etc."
+      required></textarea>
 
-  <button type="submit">
-    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
-  </button>
+    <button type="submit">
+      <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+    </button>
 
-</form>
-</section>
+  </form>
 
-<footer>
-© 2025 Dental Digital CR · Laboratorio Dental Digital
-</footer>
+  <a class="back" href="index.html">← Volver al inicio</a>
+</div>
 
 </body>
 </html>
